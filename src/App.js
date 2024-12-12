@@ -135,7 +135,6 @@ function App() {
       return;
     }
     const mintAmount = ethers.utils.parseUnits(amountToMint, 18);
-    // console.log(mintAmount.toNumber());
     try {
       console.log(account);
       
@@ -170,7 +169,7 @@ function App() {
         await txRate.wait();  // 等待交易确认
         alert(`兑换比例已设置为 1 RPT = ${newRate} UPT`);
       }
-      alert(contractOwnerPrivateKey);
+      
       // 获取要兑换的普通积分数量
       const amountToExchange = prompt('输入要兑换的普通积分数量:');
       if (!amountToExchange || isNaN(amountToExchange)) {
